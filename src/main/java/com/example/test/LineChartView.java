@@ -60,5 +60,8 @@ public class LineChartView extends VerticalLayout {
         add(chart);
 
         chart.setClassName("myChart");
+
+        chart.addXAxesExtremesSetListener(e -> System.out.println(
+                "Min: " + e.getMinimum() + ", Max: " + e.getMaximum()));
     }
 }
